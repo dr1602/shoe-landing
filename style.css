@@ -67,6 +67,7 @@ ul {
     padding-bottom: 0;
     max-width: 90%;
     margin: 0 auto;
+    display: flex;
 }
 
 .row {
@@ -109,6 +110,7 @@ header .logo{
 
 .primary-list {
     margin: 0 auto;
+    display: flex;
 }
 
 .primary-list a::before {
@@ -130,6 +132,7 @@ nav a:hover::before {
 
 .secondary-list {
     margin-left: 0;
+    display: flex;
 }
 
 .secondary-list a {
@@ -157,6 +160,7 @@ nav a:hover::before {
 
 .hero {
     align-items: center;
+    margin-top: 40px;
 }
 
 .hero>* {
@@ -200,13 +204,50 @@ nav a:hover::before {
 
 /* End Hero */
 
+/* Footer */
+
+.social-media {
+    position: absolute;
+    bottom: 20px;
+    left: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-media li {
+    list-style: none;
+}
+
+.social-media li a {
+    display: inline-block;
+    margin-left: 15px;
+    background: var(--black-v2);
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    transition: 0.2s ease-in-out;
+}
+
+.social-media li a:hover {
+    background: var(--bright-yellow);
+    transform: translateY(-10px);
+}
+
+.social-media li a img {
+    filter: invert(1);
+    transform: scale(0.5);
+}
+
+/* End Footer */
+
 /* Media */
 
 @media screen and (max-width: 810px) {
 
-    body {
-        padding-bottom: 2em;
-    }
     .logo {
         position: relative !important;
         max-width: 130px !important;
@@ -281,6 +322,18 @@ nav a:hover::before {
         flex-grow: wrap-reverse;
         gap: 2em;
         padding: 0 0;
+    }
+
+    .container {
+        margin-top: 0;
+        margin-left: 9%;
+        display: inline-grid;
+    }
+
+    .social-media {
+        position: relative;
+        margin-top: 15%;
+        left: -5%;
     }
 
 }
